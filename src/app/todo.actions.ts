@@ -14,7 +14,7 @@ export class TodoActions {
     addTodo(text: string): void {
         this.ngRedux.dispatch({
             type: TodoActions.Add_TODO,
-            payload: text
+            payload: { text, done: false}
         })
     }
 }
