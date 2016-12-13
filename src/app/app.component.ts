@@ -26,6 +26,7 @@ export class AppComponent {
     this.text = '';
   }
   onChangeDone(todo): void {
+    this.actions.updateTodo(todo);
     console.log(todo);
     // console.log(i);
     // console.log(event);
