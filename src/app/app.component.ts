@@ -9,5 +9,5 @@ import { TodoActions } from './todo.actions';
 export class AppComponent {
   title = 'app works!';
 
-  constructor(actions: TodoActions) {}
+  constructor(private actions: TodoActions) {}
 }

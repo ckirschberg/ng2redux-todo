@@ -9,12 +9,12 @@ export class TodoActions {
         private ngRedux: NgRedux<IAppState>) {
     }
 
-    static SOME_ACTION: string = 'SOME_ACTION';
+    static Add_TODO: string = 'Add_TODO';
 
-    someMethod(): void {
+    addTodo(text: string): void {
         this.ngRedux.dispatch({
-            type: TodoActions.SOME_ACTION,
-            payload: 'something'
+            type: TodoActions.Add_TODO,
+            payload: text
         })
     }
 }

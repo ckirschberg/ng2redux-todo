@@ -7,6 +7,6 @@
 </div>
 
 <div>
-  <input type="text" />
-  <button (click)="">Add</button>
+  <input type="text" [(ngModel)]="text"/>
+  <button (click)="actions.addTodo(text)">Add</button>
 </div>
