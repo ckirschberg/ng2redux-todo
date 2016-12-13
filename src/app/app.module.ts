@@ -8,6 +8,8 @@ import { NgRedux, NgReduxModule, DevToolsExtension} from 'ng2-redux';
 import { IAppState, rootReducer, enhancers } from './store';
 const createLogger = require('redux-logger');
 
+import { TodoActions } from './todo.actions';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,7 +20,7 @@ const createLogger = require('redux-logger');
     NgReduxModule.forRoot(),
     HttpModule
   ],
-  providers: [],
+  providers: [TodoActions],
   bootstrap: [AppComponent]
 })
 export class AppModule {
