@@ -15,6 +15,7 @@ const createLogger = require('redux-logger');
   imports: [
     BrowserModule,
     FormsModule,
+    NgReduxModule.forRoot(),
     HttpModule
   ],
   providers: [],
@@ -30,8 +31,7 @@ export class AppModule {
         rootReducer,
         {},
         [ createLogger() ],
-        [ ...enhancers, devTool.isEnabled() ? devTool.enhancer() : f => f]); 
+        [ ...enhancers, devTool.isEnabled() ? devTool.enhancer() : f => f]);      
     }
  }
-
 
