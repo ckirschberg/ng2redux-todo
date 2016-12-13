@@ -1,16 +1,16 @@
 import { TodoActions } from './todo.actions';
-import { IAppState } from './store';
+import { TodoState } from './store';
 
 const INITIAL_STATE: any = {
-    todos: [{text: 'hej', done: false}]
+    todos: []
 };
 
 
-export function todoReducer(state: IAppState = INITIAL_STATE, action:any) {
+export function todoReducer(state: TodoState = INITIAL_STATE, action:any) {
   switch (action.type) {
 
     case TodoActions.Add_TODO:
-        return Object.assign({}, state, { todos: [...state.todos.todos, action.payload] });
+        return Object.assign({}, state, { todos: [...state.todos, action.payload] });
     
     default:
       return state;
